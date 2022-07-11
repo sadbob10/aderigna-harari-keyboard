@@ -3,7 +3,10 @@ package com.sadamabate.aderigna_keyboard;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
+import android.media.AudioManager;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputConnection;
 
 public class Aderigna_Keyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
 
@@ -30,8 +33,32 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
     }
 
     @Override
-    public void onKey(int i, int[] ints) {
+    public void onKey(int primaryCode, int[] keyCodes) {
+        InputConnection inputConnection = getCurrentInputConnection();
 
+        switch (primaryCode)
+        {
+            case Keyboard.KEYCODE_DELETE:
+                inputConnection.deleteSurroundingText(1,0);
+                break;
+            case Keyboard.KEYCODE_DONE:
+                inputConnection.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN,KeyEvent.KEYCODE_ENTER));
+                break;
+            default:
+                char c = (char)primaryCode;
+                inputConnection.commitText(String.valueOf(c),1);
+
+        }
+
+
+    }
+
+    private void   playClick(int i){
+        AudioManager audioManager = (AudioManager)getSystemService(AUDIO_SERVICE);
+        switch (i){
+            default:
+                audioManager.playSoundEffect(audioManager.FX_KEYPRESS_STANDARD);
+        }
     }
 
     @Override
