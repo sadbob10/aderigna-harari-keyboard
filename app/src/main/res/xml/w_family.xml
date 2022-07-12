@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="10%p"
+    android:keyHeight="50dp">
+    <Row>
+        <Key android:keyLabel="ወ" android:keyWidth="14.5%p" android:keyEdgeFlags="left" android:codes="4808"/>
+        <Key android:keyLabel="ዉ" android:keyWidth="14.5%p" android:codes="4809"/>
+        <Key android:keyLabel="ዊ" android:keyWidth="14.5%p" android:codes="4810"/>
+        <Key android:keyLabel="ዋ" android:keyWidth="14.5%p" android:codes="4811"/>
+        <Key android:keyLabel="ዌ" android:keyWidth="14.5%p" android:codes="4812"/>
+        <Key android:keyLabel="ው" android:keyWidth="14.5%p"  android:codes="4813"/>
+        <Key android:keyLabel="ዎ" android:keyWidth="14.5%p" android:keyEdgeFlags="right" android:codes="4814"/>
+    </Row>
+    <Row>
+        <Key android:keyLabel="ሀ" android:keyEdgeFlags="left" android:codes="4608"/>
+        <Key android:keyLabel="ለ" android:codes="4616"/>
+        <Key android:keyLabel="ሐ" android:codes="4624"/>
+        <Key android:keyLabel="መ" android:codes="4632"/>
+        <Key android:keyLabel="ሠ" android:codes="4640"/>
+        <Key android:keyLabel="ረ" android:codes="4648"/>
+        <Key android:keyLabel="ሰ" android:codes="4656"/>
+        <Key android:keyLabel="ሸ" android:codes="4664"/>
+        <Key android:keyLabel="ቀ" android:codes="4672"/>
+        <Key android:keyLabel="በ" android:keyEdgeFlags="right" android:codes="4704"/>
+    </Row>
+
+    <Row>
+        <Key android:keyLabel="ተ" android:keyEdgeFlags="left" android:codes="4720"/>
+        <Key android:keyLabel="ቸ" android:codes="4728"/>
+        <Key android:keyLabel="የ" android:codes="4840"/>
+        <Key android:keyLabel="ነ" android:codes="4752"/>
+        <Key android:keyLabel="ኘ" android:codes="4760"/>
+        <Key android:keyLabel="አ" android:codes="4768"/>
+        <Key android:keyLabel="ከ" android:codes="4776"/>
+        <Key android:keyLabel="ኸ" android:codes="4792"/>
+        <Key android:keyLabel="ወ" android:codes="4808"/>
+        <Key android:keyLabel="ዘ" android:keyEdgeFlags="right" android:codes="4824"/>
+    </Row>
+    <Row>
+        <Key android:keyIcon="@drawable/keyboard" android:keyWidth="15%p" android:keyEdgeFlags="left" android:codes="-1"/>
+        <Key android:keyLabel="ዠ" android:codes="4832"/>
+        <Key android:keyLabel="ደ" android:codes="4848"/>
+        <Key android:keyLabel="ጀ" android:codes="4864"/>
+        <Key android:keyLabel="ገ" android:codes="4872"/>
+        <Key android:keyLabel="ጠ" android:codes="4896"/>
+        <Key android:keyLabel="ጨ" android:codes="4904"/>
+        <Key android:keyLabel="ጰ" android:codes="4912"/>
+        <Key android:keyIcon="@drawable/backspace" android:keyWidth="15%p" android:isRepeatable="true" android:keyEdgeFlags="right" android:codes="-5"/>
+    </Row>
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:keyLabel="123/፩፪፫" android:keyWidth="20%p" android:keyEdgeFlags="left" android:codes="-2"/>
+        <Key android:keyIcon="@drawable/emoj" android:codes="-44"/>
+        <Key android:keyLabel="፣" android:codes="4963"/>
+        <Key android:keyLabel="_________" android:isRepeatable="true" android:keyWidth="22%p" android:codes="32"/>
+        <Key android:keyIcon="@drawable/language" android:codes="-6"/>
+        <Key android:keyLabel="።" android:codes="4962"/>
+        <Key android:keyIcon="@drawable/key_return" android:keyWidth="18%p" android:codes="-4"/>
+    </Row>
+</Keyboard>
