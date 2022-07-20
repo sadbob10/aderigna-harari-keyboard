@@ -48,6 +48,7 @@
         <Key android:keyLabel="ጰ" android:codes="4912"/>
         <Key android:keyIcon="@drawable/backspace" android:keyWidth="15%p" android:isRepeatable="true" android:keyEdgeFlags="right" android:codes="-5"/>
     </Row>
+    <Row>
         <Key android:keyLabel="123" android:keyWidth="20%p" android:keyEdgeFlags="left" android:codes="-2"/>
         <Key android:keyIcon="@drawable/emoj" android:codes="-44"/>
         <Key android:keyLabel="፣" android:codes="4963"/>

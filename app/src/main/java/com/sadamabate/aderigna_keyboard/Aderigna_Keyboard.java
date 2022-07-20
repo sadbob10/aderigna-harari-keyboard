@@ -15,9 +15,7 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
     private KeyboardView keyboardView;
     private Keyboard keyboard;
     int key_family = 0;
-
     int first_time_selected = 0;
-    boolean second_key_selected = false;
     boolean shift_selected =false;
     boolean number_selected = false;
     boolean language_selected = false;
@@ -33,52 +31,16 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
     }
 
     @Override
-    public void onPress(int i) {
+    public void onPress(int primaryCode) {
 
     }
 
     @Override
-    public void onRelease(int i) {
+    public void onRelease(int primaryCode) {
 
     }
 
-    @Override
-    public void onKey(int primaryCode, int[] keyCodes) {
-        InputConnection inputConnection = getCurrentInputConnection();
-        familyKeyKeyboard(inputConnection,primaryCode);
-
-
-        switch (primaryCode)
-        {
-            case Keyboard.KEYCODE_DELETE:
-                inputConnection.deleteSurroundingText(1,0);
-                break;
-            case Keyboard.KEYCODE_DONE:
-                inputConnection.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN,KeyEvent.KEYCODE_ENTER));
-                break;
-            default:
-                if(primaryCode == -2 || primaryCode == -1 || primaryCode == -7 || primaryCode == -6 || primaryCode == -8|| primaryCode == -44){
-                    return;
-                }
-                char c = (char)primaryCode;
-                inputConnection.commitText(String.valueOf(c),1);
-
-
-        }
-
-
-    }
-
-    private void   playClick(int i){
-        AudioManager audioManager = (AudioManager)getSystemService(AUDIO_SERVICE);
-        switch (i){
-            default:
-                audioManager.playSoundEffect(audioManager.FX_KEYPRESS_STANDARD);
-        }
-    }
-
-    private void familyKeyKeyboard(InputConnection inputConnection, int i )
-    {
+    private void switchKeyboard(InputConnection inputConnection, int i){
         Log.d("DEBUG", "I: " + i);
 
         if((i != -2) && (i != -1) && (i != -6) && (i != -7) && (i != -8)){
@@ -111,7 +73,7 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                 keyboard = new Keyboard(this, R.xml.q_family);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
-              /*  break;
+                break;
             case 4688:
             case 4689:
             case 4690:
@@ -120,12 +82,12 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
             case 4693:
             case 4694:
             case 4699:
-                key_family = 4693;
+                key_family = 4688;
                 first_time_selected = 0;
-                keyboard = new Keyboard(this, R.xml.qq_qwerty);
+                keyboard = new Keyboard(this, R.xml.qq_family);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
-                break;*/
+                break;
             case 4813:
             case 4808:
             case 4809:
@@ -152,7 +114,6 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
-
             case 4816:
             case 4817:
             case 4818:
@@ -221,7 +182,6 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
-                /*
             case 4944:
             case 4945:
             case 4946:
@@ -230,9 +190,9 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
             case 4949:
             case 4950:
             case 4951:
-                key_family = 4774;
+                key_family = 4944;
                 first_time_selected = 0;
-                keyboard = new Keyboard(this, R.xml.p_qwerty);
+                keyboard = new Keyboard(this, R.xml.p_family);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
@@ -244,12 +204,12 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
             case 4917:
             case 4918:
             case 4919:
-                key_family = 4917;
+                key_family = 4912;
                 first_time_selected = 0;
-                keyboard = new Keyboard(this, R.xml.pp_qwerty);
+                keyboard = new Keyboard(this, R.xml.ph_family);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
-                break;*/
+                break;
             case 4656:
             case 4657:
             case 4658:
@@ -264,7 +224,6 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
-                /*
             case 4920:
             case 4921:
             case 4922:
@@ -273,12 +232,12 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
             case 4925:
             case 4926:
             case 4927:
-                key_family = 4925;
+                key_family = 4920;
                 first_time_selected = 0;
-                keyboard = new Keyboard(this, R.xml.ss_qwerty);
+                keyboard = new Keyboard(this, R.xml.ss_family);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
-                break;*/
+                break;
             case 4640:
             case 4641:
             case 4642:
@@ -289,11 +248,10 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
             case 4647:
                 key_family = 4640;
                 first_time_selected = 0;
-                keyboard = new Keyboard(this, R.xml.ss_family);
+                keyboard = new Keyboard(this, R.xml.tss_family);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
-                /*
             case 4928:
             case 4929:
             case 4930:
@@ -302,12 +260,12 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
             case 4933:
             case 4934:
             case 4935:
-                key_family = 4933;
+                key_family = 4928;
                 first_time_selected = 0;
-                keyboard = new Keyboard(this, R.xml.ssss_qwerty);
+                keyboard = new Keyboard(this, R.xml.ts_family);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
-                break;*/
+                break;
             case 4853:
             case 4848:
             case 4849:
@@ -322,7 +280,6 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
-                /*
             case 4936:
             case 4937:
             case 4938:
@@ -331,12 +288,12 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
             case 4941:
             case 4942:
             case 4943:
-                key_family = 4941;
+                key_family = 4936;
                 first_time_selected = 0;
-                keyboard = new Keyboard(this, R.xml.f_qwerty);
+                keyboard = new Keyboard(this, R.xml.f_family);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
-                break;*/
+                break;
             case 4872:
             case 4873:
             case 4874:
@@ -351,7 +308,6 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
-                /*
             case 4888:
             case 4889:
             case 4890:
@@ -360,12 +316,12 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
             case 4893:
             case 4894:
             case 4895:
-                key_family = 4893;
+                key_family = 4888;
                 first_time_selected = 0;
-                keyboard = new Keyboard(this, R.xml.gg_qwerty);
+                keyboard = new Keyboard(this, R.xml.gg_family);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
-                break;*/
+                break;
             case 4608:
             case 4609:
             case 4610:
@@ -503,7 +459,6 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
-                /*
             case 4712:
             case 4713:
             case 4714:
@@ -512,12 +467,12 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
             case 4717:
             case 4718:
             case 4719:
-                key_family = 4717;
+                key_family = 4712;
                 first_time_selected = 0;
-                keyboard = new Keyboard(this, R.xml.v_qwerty);
+                keyboard = new Keyboard(this, R.xml.v_family);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
-                break;*/
+                break;
             case 4704:
             case 4705:
             case 4706:
@@ -589,23 +544,22 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
             case -1:
-                if(second_key_selected) {
+                if(shift_selected) {
                     key_family = -1;
-                    second_key_selected = false;
+                    shift_selected = false;
                     first_time_selected = 0;
                     keyboard = new Keyboard(this, R.xml.first_key);
                     keyboardView.setKeyboard(keyboard);
                     keyboardView.setOnKeyboardActionListener(this);
                 }else{
                     key_family = -1;
-                    second_key_selected = true;
+                    shift_selected = true;
                     first_time_selected = 0;
                     keyboard = new Keyboard(this, R.xml.second_keys);
                     keyboardView.setKeyboard(keyboard);
                     keyboardView.setOnKeyboardActionListener(this);
                 }
                 break;
-
             case -2:
                 if(number_selected) {
                     key_family = -2;
@@ -623,7 +577,6 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                     keyboardView.setOnKeyboardActionListener(this);
                 }
                 break;
-
             case -6:
                 Log.d(TAG, "switchKeyboard: -6");
                 if(language_selected){
@@ -638,7 +591,7 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                     language_selected = true;
                     shift_selected = false;
                     first_time_selected = 0;
-                    keyboard = new Keyboard(this, R.xml.english_small_latter);
+                    keyboard = new Keyboard(this, R.xml.small_latter_english_alphabet);
                     keyboardView.setKeyboard(keyboard);
                     keyboardView.setOnKeyboardActionListener(this);
                 }
@@ -648,7 +601,7 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                 key_family = -7;
                 english_capital_letter_selected = true;
                 first_time_selected = 0;
-                keyboard = new Keyboard(this, R.xml.english_capital_lock);
+                keyboard = new Keyboard(this, R.xml.english_capital_latter);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
@@ -657,26 +610,51 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                 key_family = -8;
                 english_capital_letter_selected = true;
                 first_time_selected = 0;
-                keyboard = new Keyboard(this, R.xml.english_small_latter);
+                keyboard = new Keyboard(this, R.xml.small_latter_english_alphabet);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
-
             case -44:
                 key_family = -44;
                 keyboard = new Keyboard(this, R.xml.emoji);
                 keyboardView.setKeyboard(keyboard);
                 keyboardView.setOnKeyboardActionListener(this);
                 break;
-
-
-
         }
-
     }
 
     @Override
-    public void onText(CharSequence charSequence) {
+    public void onKey(int primaryCode, int[] keyCodes) {
+        InputConnection inputConnection = getCurrentInputConnection();
+        switchKeyboard(inputConnection, primaryCode);
+        switch(primaryCode){
+            case Keyboard.KEYCODE_DELETE:
+                inputConnection.deleteSurroundingText(1, 0);
+                break;
+            case Keyboard.KEYCODE_DONE:
+                inputConnection.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
+                break;
+            default:
+                if(primaryCode == -2 || primaryCode == -1 || primaryCode == -7 || primaryCode == -6 || primaryCode == -8){
+                    return;
+                }
+                char c = (char)primaryCode;
+                Log.d("text", "i: " + primaryCode);
+                inputConnection.commitText(String.valueOf(c), 1);
+
+        }
+    }
+
+    private void playClick(int i){
+        AudioManager audioManage = (AudioManager)getSystemService(AUDIO_SERVICE);
+        switch(i){
+            default:
+                audioManage.playSoundEffect(audioManage.FX_KEYPRESS_STANDARD);
+        }
+    }
+
+    @Override
+    public void onText(CharSequence text) {
 
     }
 

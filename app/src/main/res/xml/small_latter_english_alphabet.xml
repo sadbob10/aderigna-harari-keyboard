@@ -59,7 +59,7 @@
         <Key android:keyLabel="123" android:keyWidth="20%p" android:keyEdgeFlags="left" android:codes="-2"/>
         <Key android:keyIcon="@drawable/emoj" android:codes="-44"/>
         <Key android:keyLabel="፣" android:codes="4963"/>
-        <Key android:keyLabel="[_______]" android:isRepeatable="true" android:keyWidth="22%p" android:codes="32"/>
+        <Key android:keyLabel="_________" android:isRepeatable="true" android:keyWidth="22%p" android:codes="32"/>
         <Key android:keyIcon="@drawable/language" android:codes="-6" />
         <Key android:keyLabel="።" android:codes="4962"/>
         <Key android:keyIcon="@drawable/backspace" android:keyWidth="18%p" android:codes="-4"/>
