@@ -49,7 +49,7 @@
         <Key android:keyIcon="@drawable/backspace" android:keyWidth="15%p" android:isRepeatable="true" android:keyEdgeFlags="right" android:codes="-5"/>
     </Row>
     <Row android:rowEdgeFlags="bottom">
-        <Key android:keyLabel="123/፩፪፫" android:keyWidth="20%p" android:keyEdgeFlags="left" android:codes="-2"/>
+        <Key android:keyLabel="123" android:keyWidth="20%p" android:keyEdgeFlags="left" android:codes="-2"/>
         <Key android:keyIcon="@drawable/emoj" android:codes="-44"/>
         <Key android:keyLabel="፣" android:codes="4963"/>
         <Key android:keyLabel="_________" android:isRepeatable="true" android:keyWidth="22%p" android:codes="32"/>
