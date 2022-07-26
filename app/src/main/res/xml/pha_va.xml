@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
-        android:keyWidth="10%p"
-        android:keyHeight="50dp">
-
-        <Row>
-            <Key android:keyLabel="ፐ" android:keyWidth="12.5%p" android:keyEdgeFlags="left" android:codes="4944"/>
-            <Key android:keyLabel="ፑ" android:keyWidth="12.5%p" android:codes="4945"/>
-            <Key android:keyLabel="ፒ" android:keyWidth="12.5%p" android:codes="4946"/>
-            <Key android:keyLabel="ፓ" android:keyWidth="12.5%p" android:codes="4947"/>
-            <Key android:keyLabel="ፔ" android:keyWidth="12.5%p" android:codes="4948"/>
-            <Key android:keyLabel="ፕ" android:keyWidth="12.5%p" android:codes="4949"/>
-            <Key android:keyLabel="ፖ" android:keyWidth="12.5%p" android:codes="4950"/>
-            <Key android:keyLabel="ፗ" android:keyWidth="12.5%p" android:keyEdgeFlags="right" android:codes="4951"/>
-        </Row>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="10%p"
+    android:keyHeight="50dp">
+    <Row>
+        <Key android:keyLabel="ꬨ" android:keyWidth="14.5%p" android:keyEdgeFlags="left" android:codes="43816"/>
+        <Key android:keyLabel="ꬩ" android:keyWidth="14.5%p" android:codes="43817"/>
+        <Key android:keyLabel="ꬪ" android:keyWidth="14.5%p" android:codes="43818"/>
+        <Key android:keyLabel="ꬫ" android:keyWidth="14.5%p" android:codes="43819"/>
+        <Key android:keyLabel="ꬬ" android:keyWidth="14.5%p" android:codes="43820"/>
+        <Key android:keyLabel="ꬭ" android:keyWidth="14.5%p" android:codes="43821"/>
+        <Key android:keyLabel="ꬮ" android:keyWidth="14.5%p" android:keyEdgeFlags="right" android:codes="43822"/>
+    </Row>
     <Row>
         <Key android:keyLabel="ጠ" android:keyEdgeFlags="left" android:codes="4896"/>
         <Key android:keyLabel="ጨ" android:codes="4904"/>

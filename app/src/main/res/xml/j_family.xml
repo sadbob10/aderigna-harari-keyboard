@@ -27,26 +27,25 @@
     </Row>
 
     <Row>
-        <Key android:keyLabel="ተ" android:keyEdgeFlags="left" android:codes="4720"/>
+        <Key android:keyLabel="ተ" android:keyEdgeFlags="left" android:horizontalGap="5%" android:codes="4720"/>
         <Key android:keyLabel="ቸ" android:codes="4728"/>
-        <Key android:keyLabel="የ" android:codes="4840"/>
+        <Key android:keyLabel="ኀ" android:codes="4736"/>
         <Key android:keyLabel="ነ" android:codes="4752"/>
         <Key android:keyLabel="ኘ" android:codes="4760"/>
         <Key android:keyLabel="አ" android:codes="4768"/>
         <Key android:keyLabel="ከ" android:codes="4776"/>
         <Key android:keyLabel="ኸ" android:codes="4792"/>
-        <Key android:keyLabel="ወ" android:codes="4808"/>
-        <Key android:keyLabel="ዘ" android:keyEdgeFlags="right" android:codes="4824"/>
+        <Key android:keyLabel="ወ" android:keyEdgeFlags="right" android:codes="4808"/>
     </Row>
     <Row>
         <Key android:keyIcon="@drawable/keyboard" android:keyWidth="15%p" android:keyEdgeFlags="left" android:codes="-1"/>
+        <Key android:keyLabel="ዐ" android:codes="4816"/>
+        <Key android:keyLabel="ዘ" android:codes="4824"/>
         <Key android:keyLabel="ዠ" android:codes="4832"/>
+        <Key android:keyLabel="የ" android:codes="4840"/>
         <Key android:keyLabel="ደ" android:codes="4848"/>
         <Key android:keyLabel="ጀ" android:codes="4864"/>
         <Key android:keyLabel="ገ" android:codes="4872"/>
-        <Key android:keyLabel="ጠ" android:codes="4896"/>
-        <Key android:keyLabel="ጨ" android:codes="4904"/>
-        <Key android:keyLabel="ጰ" android:codes="4912"/>
         <Key android:keyIcon="@drawable/backspace" android:keyWidth="15%p" android:isRepeatable="true" android:keyEdgeFlags="right" android:codes="-5"/>
     </Row>
     <Row android:rowEdgeFlags="bottom">
