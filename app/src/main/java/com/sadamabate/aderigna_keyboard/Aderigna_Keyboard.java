@@ -706,7 +706,7 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                         language_selected = true;
                         shift_selected = false;
                         first_time_selected = 0;
-                        keyboard = new Keyboard(this, R.xml.small_latter_english_alphabet);
+                        keyboard = new Keyboard(this, R.xml.eglish_latter_english_alphabet);
                         keyboardView.setKeyboard(keyboard);
                         keyboardView.setOnKeyboardActionListener(this);
                     }
@@ -725,7 +725,7 @@ public class Aderigna_Keyboard extends InputMethodService implements KeyboardVie
                     key_family = -8;
                     english_capital_letter_selected = true;
                     first_time_selected = 0;
-                    keyboard = new Keyboard(this, R.xml.small_latter_english_alphabet);
+                    keyboard = new Keyboard(this, R.xml.eglish_latter_english_alphabet);
                     keyboardView.setKeyboard(keyboard);
                     keyboardView.setOnKeyboardActionListener(this);
                     break;
